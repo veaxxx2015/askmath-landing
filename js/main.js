@@ -27,6 +27,54 @@ document.addEventListener('DOMContentLoaded', () => {
   handleStickyNavbar();
 
   /* ==========================================================================
+     1b. STICKY MOBILE CTA
+     Show the fixed bottom CTA button on mobile after scrolling past the hero
+     CTA. Hide it when the final CTA section is in view.
+     ========================================================================== */
+
+  const stickyCta = document.getElementById('stickyCta');
+  const heroCta = document.querySelector('.hero__cta-group');
+  const finalCtaSection = document.querySelector('.final-cta');
+
+  if (stickyCta && heroCta) {
+    const stickyObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.target === heroCta) {
+            // Show sticky CTA when hero CTA scrolls out of view
+            if (!entry.isIntersecting) {
+              stickyCta.classList.add('sticky-cta--visible');
+            } else {
+              stickyCta.classList.remove('sticky-cta--visible');
+            }
+          }
+        });
+      },
+      { threshold: 0 }
+    );
+
+    stickyObserver.observe(heroCta);
+
+    // Hide sticky CTA when final CTA section is visible
+    if (finalCtaSection) {
+      const finalObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              stickyCta.classList.remove('sticky-cta--visible');
+            } else if (heroCta.getBoundingClientRect().bottom < 0) {
+              stickyCta.classList.add('sticky-cta--visible');
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      finalObserver.observe(finalCtaSection);
+    }
+  }
+
+  /* ==========================================================================
      2. BURGER MENU (Mobile Navigation)
      Toggle the mobile menu open/closed. Close it when any nav link is clicked.
      ========================================================================== */
