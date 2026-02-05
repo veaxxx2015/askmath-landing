@@ -32,21 +32,41 @@ document.addEventListener('DOMContentLoaded', () => {
      ========================================================================== */
 
   const burgerBtn = document.getElementById('burgerBtn');
+  const navOverlay = document.getElementById('navOverlay');
   const navLinks = document.querySelectorAll('.navbar__link');
+
+  function closeMenu() {
+    if (navbar) {
+      navbar.classList.remove('navbar--open');
+      document.body.style.overflow = '';
+    }
+  }
+
+  function openMenu() {
+    if (navbar) {
+      navbar.classList.add('navbar--open');
+      document.body.style.overflow = 'hidden';
+    }
+  }
 
   if (burgerBtn && navbar) {
     burgerBtn.addEventListener('click', () => {
-      navbar.classList.toggle('navbar--open');
+      if (navbar.classList.contains('navbar--open')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
     });
+  }
+
+  // Close menu when overlay is clicked
+  if (navOverlay) {
+    navOverlay.addEventListener('click', closeMenu);
   }
 
   // Close the mobile menu when any navigation link is clicked
   navLinks.forEach((link) => {
-    link.addEventListener('click', () => {
-      if (navbar) {
-        navbar.classList.remove('navbar--open');
-      }
-    });
+    link.addEventListener('click', closeMenu);
   });
 
   /* ==========================================================================
