@@ -1382,7 +1382,7 @@ p {
 }
 
 .accordion__item--open .accordion__content {
-  max-height: 500px;
+  max-height: 1000px;
 }
 
 .accordion__content p,
