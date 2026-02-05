@@ -91,6 +91,14 @@
       },
       {
         "@type": "Question",
+        "name": "На чём основана методика?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Каждая функция основана на науке: зона ближайшего развития Выготского (адаптивная сложность), кривая забывания Эббингауза и алгоритм SM-2 (тетрадь ошибок с интервальным повторением), принцип активного вспоминания (пошаговое решение с блокировкой ответа), осознанная практика (генератор задач с вариациями на слабые темы)."
+        }
+      },
+      {
+        "@type": "Question",
         "name": "Какие классы поддерживаются?",
         "acceptedAnswer": {
           "@type": "Answer",
@@ -157,7 +165,6 @@
       </a>
       <nav class="navbar__nav" id="navMenu">
         <a href="#how-it-works" class="navbar__link">Как работает</a>
-        <a href="#features" class="navbar__link">Возможности</a>
         <a href="#audience" class="navbar__link">Для кого</a>
         <a href="#pricing" class="navbar__link">Тарифы</a>
         <a href="#faq" class="navbar__link">FAQ</a>
@@ -282,24 +289,6 @@
       </div>
     </section>
 
-    <!-- ═══ 3. СЧЁТЧИКИ ═══ -->
-    <section class="stats">
-      <div class="container stats__inner">
-        <div class="stat-card" data-aos="fade-up">
-          <span class="stat-card__number" data-count="500">0</span><span class="stat-card__plus">+</span>
-          <span class="stat-card__label">задач решено</span>
-        </div>
-        <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
-          <span class="stat-card__number" data-count="7">0</span><span class="stat-card__unit"> сек</span>
-          <span class="stat-card__label">среднее время ответа</span>
-        </div>
-        <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
-          <span class="stat-card__number" data-count="6">0</span>
-          <span class="stat-card__label">шагов максимум на задачу</span>
-        </div>
-      </div>
-    </section>
-
     <!-- ═══ 4. КАК ЭТО РАБОТАЕТ ═══ -->
     <section class="how-it-works" id="how-it-works">
       <div class="container">
@@ -320,7 +309,7 @@
             </div>
             <div class="step__num">2</div>
             <h3 class="step__title">Реши по шагам</h3>
-            <p class="step__text">Бот разбивает задачу на 2-6 шагов. Нельзя перескочить вперёд.</p>
+            <p class="step__text">Бот разбивает задачу на 2-6 шагов. Два формата: тест в чате или решение на бумаге с фото. Нельзя перескочить вперёд.</p>
           </div>
           <div class="step" data-aos="fade-up" data-aos-delay="200">
             <div class="step__icon">
@@ -345,71 +334,6 @@
             <div class="step__num">5</div>
             <h3 class="step__title">Разбор решения</h3>
             <p class="step__text">Полное объяснение каждого шага с формулами. Можно задать вопросы в чате.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ 5. ДВА РЕЖИМА ═══ -->
-    <section class="modes">
-      <div class="container">
-        <h2 class="section-title" data-aos="fade-up">Два режима решения</h2>
-        <p class="section-subtitle" data-aos="fade-up">Выбери удобный формат после того, как бот разбил задачу на шаги</p>
-        <div class="modes__grid">
-          <div class="mode-card" data-aos="fade-right">
-            <div class="mode-card__badge">Быстрый</div>
-            <h3 class="mode-card__title">Тест в чате</h3>
-            <p class="mode-card__text">Для каждого шага — варианты ответов кнопками. Нажал правильный — следующий шаг. В конце — балл от 0 до 100.</p>
-            <p class="mode-card__for">Подходит для быстрой проверки и тренировки</p>
-          </div>
-          <div class="mode-card" data-aos="fade-left">
-            <div class="mode-card__badge mode-card__badge--alt">Глубокий</div>
-            <h3 class="mode-card__title">Решение на бумаге</h3>
-            <p class="mode-card__text">Реши в тетради, сфотографируй. AI проанализирует: где ошибка в вычислении, пропущен шаг, неправильно применена формула.</p>
-            <p class="mode-card__for">Подходит для домашней работы и подготовки к контрольным</p>
-          </div>
-        </div>
-        <p class="modes__note" data-aos="fade-up">Оба режима дают XP, влияют на серию и учитываются в статистике для родителей</p>
-      </div>
-    </section>
-
-    <!-- ═══ 6. ЧТО ДЕЛАЕТ БОТ ОСОБЕННЫМ ═══ -->
-    <section class="features" id="features">
-      <div class="container">
-        <h2 class="section-title" data-aos="fade-up">Что делает бот особенным</h2>
-        <p class="section-subtitle" data-aos="fade-up">Каждая функция основана на научных исследованиях в области обучения</p>
-        <div class="features__grid">
-          <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
-            <div class="feature-card__icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            </div>
-            <h3 class="feature-card__title">Защита от списывания</h3>
-            <p class="feature-card__text">Шаги заблокированы. Нельзя перескочить к ответу. Каждый шаг нужно решить самому. Это не калькулятор — это тренажёр.</p>
-            <p class="feature-card__science">Наука: активное вспоминание повышает запоминание на 50% по сравнению с перечитыванием — принцип когнитивной психологии, подтверждённый мета-анализами</p>
-          </div>
-          <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="feature-card__icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
-            </div>
-            <h3 class="feature-card__title">Адаптивная сложность</h3>
-            <p class="feature-card__text">Решаешь легко — сложность растёт. Ошибаешься — снижается. Задачи подбираются в зону ближайшего развития — там, где обучение максимально эффективно.</p>
-            <p class="feature-card__science">Наука: зона ближайшего развития (Л.С. Выготский) — обучение эффективнее всего на границе между «уже знаю» и «ещё не могу»</p>
-          </div>
-          <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="feature-card__icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-            </div>
-            <h3 class="feature-card__title">Тетрадь ошибок</h3>
-            <p class="feature-card__text">Ошибки не забываются. Алгоритм SM-2 — научное интервальное повторение. Бот напомнит решить похожую задачу именно тогда, когда мозг начинает её забывать.</p>
-            <p class="feature-card__science">Наука: кривая забывания Эббингауза — без повторения 80% материала забывается за неделю. Интервальное повторение увеличивает запоминание в 2-3 раза</p>
-          </div>
-          <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
-            <div class="feature-card__icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-            </div>
-            <h3 class="feature-card__title">Бесконечный тренажёр</h3>
-            <p class="feature-card__text">Команда /train — и бот генерирует новую задачу на любую тему, любой сложности, для любого класса (5-11). Практика без ограничений.</p>
-            <p class="feature-card__science">Наука: принцип осознанной практики — навык формируется через многократное решение задач с вариациями, а не повторение одного и того же</p>
           </div>
         </div>
       </div>
@@ -553,51 +477,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ 8. СРАВНЕНИЕ ═══ -->
-    <section class="comparison">
-      <div class="container">
-        <h2 class="section-title" data-aos="fade-up">Не замена репетитора, а ежедневный помощник</h2>
-        <div class="comparison__wrapper" data-aos="fade-up">
-          <table class="comparison__table">
-            <colgroup>
-              <col class="comparison__col-label">
-              <col class="comparison__col-tutor">
-              <col class="comparison__col-bot">
-            </colgroup>
-            <thead>
-              <tr>
-                <th></th>
-                <th>Репетитор</th>
-                <th class="comparison__highlight">AI Bot</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Стоимость</td>
-                <td>1 500–3 000 &#8381;/час</td>
-                <td class="comparison__highlight">от 0 &#8381;/мес</td>
-              </tr>
-              <tr>
-                <td>Доступность</td>
-                <td>1-2 раза/неделю</td>
-                <td class="comparison__highlight">24/7</td>
-              </tr>
-              <tr>
-                <td>Контроль для родителей</td>
-                <td>Нет</td>
-                <td class="comparison__highlight">Дашборд со статистикой</td>
-              </tr>
-              <tr>
-                <td>Защита от списывания</td>
-                <td>На совести ученика</td>
-                <td class="comparison__highlight">Пошаговый контроль</td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </div>
     </section>
@@ -772,6 +651,21 @@
             </button>
             <div class="accordion__content">
               <p>Нет. Бот разбивает задачу на шаги и просит ученика решить каждый шаг самостоятельно. Нельзя перескочить вперёд или подсмотреть ответ. При затруднении бот даёт направление, а не готовый ответ. Это тренажёр, а не калькулятор.</p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger">
+              <span>На чём основана методика?</span>
+              <svg class="accordion__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="accordion__content">
+              <p>Каждая функция бота построена на проверенных научных принципах:</p>
+              <ul>
+                <li><strong>Зона ближайшего развития</strong> (Л.С. Выготский) — адаптивная сложность подбирает задачи на границе между «уже знаю» и «ещё не могу», где обучение максимально эффективно.</li>
+                <li><strong>Кривая забывания Эббингауза + алгоритм SM-2</strong> — тетрадь ошибок возвращает задачи именно тогда, когда мозг начинает их забывать. Интервальное повторение увеличивает запоминание в 2-3 раза.</li>
+                <li><strong>Активное вспоминание</strong> (active recall) — пошаговое решение с блокировкой ответа повышает запоминание на 50% по сравнению с перечитыванием.</li>
+                <li><strong>Осознанная практика</strong> (deliberate practice) — генератор задач создаёт вариации на слабые темы, а не повторяет одно и то же.</li>
+              </ul>
             </div>
           </div>
           <div class="accordion__item">
