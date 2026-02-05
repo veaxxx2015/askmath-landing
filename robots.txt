@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /assets/fonts/
+
+Sitemap: https://askmath.ru/sitemap.xml
+
+# Yandex
+Host: askmath.ru
