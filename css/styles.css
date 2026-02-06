@@ -550,6 +550,23 @@ p {
   color: var(--color-text-tertiary);
 }
 
+.hero__cta-consent {
+  font-size: 0.75rem;
+  color: var(--color-text-tertiary);
+  margin-top: var(--space-sm);
+  line-height: 1.5;
+}
+
+.hero__cta-consent a {
+  color: var(--color-text-tertiary);
+  text-decoration: underline;
+  transition: color var(--transition-fast);
+}
+
+.hero__cta-consent a:hover {
+  color: var(--color-primary);
+}
+
 .hero__visual {
   flex-shrink: 0;
   display: flex;
@@ -1571,6 +1588,22 @@ p {
 }
 
 .footer__links a:hover {
+  color: var(--color-primary-light);
+}
+
+.footer__operator {
+  font-size: 0.8rem;
+  color: #94A3B8;
+  line-height: 1.6;
+}
+
+.footer__operator a {
+  color: #94A3B8;
+  text-decoration: underline;
+  transition: color var(--transition-fast);
+}
+
+.footer__operator a:hover {
   color: var(--color-primary-light);
 }
 
