@@ -602,6 +602,22 @@ p {
   color: var(--color-success);
 }
 
+.trust-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md) var(--space-xl);
+  justify-content: flex-start;
+}
+
+.hero__trust--left {
+  margin-top: var(--space-xl);
+}
+
+.hero__trust--left .trust-item {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
 /* Hero badge */
 .hero__badge {
   display: inline-block;
