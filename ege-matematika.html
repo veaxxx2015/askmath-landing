@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Подготовка к ЕГЭ по математике 2026 — AI-репетитор в Telegram</title>
+  <meta name="description" content="Бесплатная подготовка к ЕГЭ по математике (база и профиль) с AI-репетитором. Пошаговый разбор задач, тренажёр по всем темам. Без списывания — учит думать.">
+  <meta name="keywords" content="подготовка к ЕГЭ математика, ЕГЭ математика 2026, репетитор ЕГЭ, профильная математика, базовая математика, тренажёр ЕГЭ">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://askmath.ru/ege-matematika.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Подготовка к ЕГЭ по математике 2026 — AI-репетитор">
+  <meta property="og:description" content="Бесплатная подготовка к ЕГЭ (база и профиль) с AI-репетитором в Telegram. Пошаговый разбор задач без готовых ответов.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://askmath.ru/ege-matematika.html">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:image" content="https://askmath.ru/assets/images/og-image.jpg">
+
+  <!-- Preload font -->
+  <link rel="preload" href="assets/fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css?v=8">
+
+  <style>
+    .landing {
+      padding: calc(var(--navbar-height) + var(--space-3xl)) var(--container-padding) var(--space-4xl);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .landing__badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
+      color: white;
+      font-size: 0.8rem;
+      font-weight: var(--font-weight-semibold);
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      margin-bottom: var(--space-lg);
+    }
+    .landing h1 {
+      font-size: clamp(1.75rem, 5vw, 2.75rem);
+      font-weight: var(--font-weight-extrabold);
+      color: var(--color-text);
+      margin-bottom: var(--space-md);
+      line-height: 1.2;
+    }
+    .landing__subtitle {
+      font-size: 1.15rem;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+      margin-bottom: var(--space-xl);
+    }
+    .landing h2 {
+      font-size: clamp(1.25rem, 3vw, 1.6rem);
+      font-weight: var(--font-weight-bold);
+      color: var(--color-text);
+      margin-top: var(--space-3xl);
+      margin-bottom: var(--space-lg);
+    }
+    .landing h3 {
+      font-size: 1.1rem;
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-text);
+      margin-top: var(--space-xl);
+      margin-bottom: var(--space-sm);
+    }
+    .landing p,
+    .landing li {
+      color: var(--color-text-secondary);
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: var(--space-md);
+    }
+    .landing ul,
+    .landing ol {
+      padding-left: 1.5rem;
+      margin-bottom: var(--space-lg);
+    }
+    .landing li {
+      margin-bottom: var(--space-sm);
+    }
+    .landing a {
+      color: var(--color-primary);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .landing a:hover {
+      color: var(--color-primary-dark);
+    }
+    .landing__back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--color-primary);
+      text-decoration: none;
+      font-weight: var(--font-weight-medium);
+      font-size: 0.95rem;
+      margin-bottom: var(--space-xl);
+    }
+    .landing__back:hover {
+      color: var(--color-primary-dark);
+    }
+    .landing__back svg {
+      width: 18px;
+      height: 18px;
+    }
+    .landing__cta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-md);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-2xl);
+      margin: var(--space-2xl) 0;
+      text-align: center;
+    }
+    .landing__cta-title {
+      font-size: 1.25rem;
+      font-weight: var(--font-weight-bold);
+      color: var(--color-text);
+      margin: 0;
+    }
+    .landing__cta-text {
+      color: var(--color-text-secondary);
+      margin: 0;
+    }
+    .landing__features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--space-lg);
+      margin: var(--space-xl) 0;
+    }
+    .landing__feature {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+    }
+    .landing__feature-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--color-primary-subtle);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--space-md);
+      color: var(--color-primary);
+    }
+    .landing__feature h3 {
+      margin-top: 0;
+      margin-bottom: var(--space-xs);
+      font-size: 1rem;
+    }
+    .landing__feature p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+    .landing__topics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-sm);
+      margin: var(--space-lg) 0;
+    }
+    .landing__topic {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-sm) var(--space-md);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      font-size: 0.9rem;
+      color: var(--color-text-secondary);
+    }
+    .landing__topic svg {
+      color: var(--color-primary);
+      flex-shrink: 0;
+    }
+    .landing__levels {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--space-lg);
+      margin: var(--space-xl) 0;
+    }
+    .landing__level {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+    }
+    .landing__level h3 {
+      margin-top: 0;
+      color: var(--color-primary);
+    }
+    .landing__level ul {
+      margin-bottom: 0;
+    }
+  </style>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Подготовка к ЕГЭ по математике с AI-репетитором",
+    "description": "Бесплатная подготовка к ЕГЭ по математике (база и профиль) с AI-репетитором в Telegram. Пошаговый разбор задач, тренажёр по всем темам.",
+    "provider": {
+      "@type": "Organization",
+      "name": "AskMathBot"
+    },
+    "educationalLevel": "10-11 класс",
+    "isAccessibleForFree": true,
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "RUB"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <main class="landing">
+    <a href="index.html" class="landing__back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+      На главную
+    </a>
+
+    <span class="landing__badge">ЕГЭ 2026</span>
+    <h1>Подготовка к ЕГЭ по математике с AI-репетитором</h1>
+    <p class="landing__subtitle">Бесплатный тренажёр в Telegram для подготовки к базовому и профильному ЕГЭ. Бот разбирает задачи по шагам и не даёт списать — учит думать самостоятельно.</p>
+
+    <div class="landing__cta">
+      <p class="landing__cta-title">Начни подготовку к ЕГЭ прямо сейчас</p>
+      <p class="landing__cta-text">Отправь фото задачи — бот разберёт её по шагам</p>
+      <a href="https://t.me/ask_mathbot?start=ege" class="btn btn--large btn--accent">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+        Открыть бота
+      </a>
+    </div>
+
+    <h2>База или профиль — бот поможет с обоими</h2>
+
+    <div class="landing__levels">
+      <div class="landing__level">
+        <h3>Базовый ЕГЭ</h3>
+        <p>Для тех, кому математика не нужна для поступления. Цель — получить аттестат.</p>
+        <ul>
+          <li>21 задание</li>
+          <li>Оценка по 5-балльной шкале</li>
+          <li>Минимум для сдачи — 7 заданий (тройка)</li>
+          <li>Бот поможет уверенно решать 15+ заданий</li>
+        </ul>
+      </div>
+      <div class="landing__level">
+        <h3>Профильный ЕГЭ</h3>
+        <p>Для поступления на технические, экономические и IT-специальности.</p>
+        <ul>
+          <li>18 заданий (12 с кратким ответом + 6 с развёрнутым)</li>
+          <li>Максимум 100 баллов</li>
+          <li>Минимум для поступления — обычно 39+ баллов</li>
+          <li>Бот разбирает задачи обеих частей по шагам</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Почему AI-репетитор эффективен для ЕГЭ</h2>
+
+    <div class="landing__features">
+      <div class="landing__feature">
+        <div class="landing__feature-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Антисписывание</h3>
+        <p>Бот блокирует готовый ответ. Ты решаешь каждый шаг сам — как на реальном экзамене, где списать невозможно.</p>
+      </div>
+      <div class="landing__feature">
+        <div class="landing__feature-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h3>Фото → решение</h3>
+        <p>Сфотографируй задачу из сборника Ященко, варианта с Решу ЕГЭ или любого другого источника — бот распознает и разберёт.</p>
+      </div>
+      <div class="landing__feature">
+        <div class="landing__feature-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+        </div>
+        <h3>Адаптивная сложность</h3>
+        <p>Бот анализирует твои ошибки и подбирает задачи на границе твоих возможностей — там, где обучение максимально эффективно.</p>
+      </div>
+      <div class="landing__feature">
+        <div class="landing__feature-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        </div>
+        <h3>Интервальное повторение</h3>
+        <p>Тетрадь ошибок возвращает задачи именно тогда, когда мозг начинает их забывать. Это увеличивает запоминание в 2-3 раза.</p>
+      </div>
+    </div>
+
+    <h2>Темы ЕГЭ, которые покрывает бот</h2>
+    <p>Бот работает со всеми заданиями ЕГЭ по математике — и базового, и профильного уровня:</p>
+
+    <div class="landing__topics">
+      <div class="landing__topic">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Вычисления и преобразования
+      </div>
+      <div class="landing__topic">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Уравнения и неравенства
+      </div>
+      <div class="landing__topic">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Функции и их свойства
+      </div>
+      <div class="landing__topic">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Производная и интеграл
+      </div>
+      <div class="landing__topic">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Планиметрия
+      </div>
+      <div class="landing__topic">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Стереометрия
+      </div>
+      <div class="landing__topic">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Текстовые задачи
+      </div>
+      <div class="landing__topic">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Теория вероятностей
+      </div>
+      <div class="landing__topic">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Параметры (профиль)
+      </div>
+      <div class="landing__topic">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Экономические задачи
+      </div>
+    </div>
+
+    <h2>План подготовки к ЕГЭ с ботом</h2>
+    <ol>
+      <li><strong>Диагностика (1 неделя).</strong> Прорешай по 2-3 задачи из каждой темы. Бот покажет, где больше всего пробелов.</li>
+      <li><strong>Работа над базой (1-2 месяца).</strong> Закрой пробелы в базовых темах — без них сложные задачи не решить.</li>
+      <li><strong>Отработка типов заданий (2-3 месяца).</strong> Прорешивай задачи по типам: сначала №1-12, потом вторую часть.</li>
+      <li><strong>Варианты целиком (1 месяц до экзамена).</strong> Решай полные варианты, засекая время. Бот покажет слабые места.</li>
+    </ol>
+
+    <h2>Сколько стоит подготовка к ЕГЭ</h2>
+    <p>Базовый функционал бесплатный — 3 задачи в день. Для серьёзной подготовки к ЕГЭ подпишись на <a href="https://t.me/ask_agent">наш канал</a> — это откроет безлимит задач и все функции бесплатно.</p>
+
+    <p>Сравни: репетитор по математике для ЕГЭ стоит 1500-3000 рублей за занятие. Курсы подготовки — от 30 000 рублей. С AI-репетитором ты можешь готовиться каждый день, и это бесплатно.</p>
+
+    <div class="landing__cta">
+      <p class="landing__cta-title">ЕГЭ ближе, чем кажется</p>
+      <p class="landing__cta-text">Начни готовиться сегодня — каждый день на счету</p>
+      <a href="https://t.me/ask_mathbot?start=ege" class="btn btn--large btn--accent">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+        Начать подготовку к ЕГЭ
+      </a>
+    </div>
+
+    <h2>Часто задаваемые вопросы</h2>
+
+    <h3>Можно ли подготовиться к профильному ЕГЭ на 80+ баллов только с ботом?</h3>
+    <p>Бот — мощный тренажёр для отработки навыков решения. Для теории и разбора сложных концепций рекомендуем сочетать бота с видеоуроками или учебниками. Но практика — 80% успеха на ЕГЭ, и здесь бот незаменим.</p>
+
+    <h3>Бот разбирает задачи второй части ЕГЭ?</h3>
+    <p>Да. Бот работает с задачами любой сложности, включая №13-18 профильного ЕГЭ. Для сложных задач он разбивает решение на больше шагов и даёт подробные подсказки при затруднениях.</p>
+
+    <h3>Как понять, что я готов к экзамену?</h3>
+    <p>Прорешивай полные варианты с таймером. Если стабильно набираешь нужный балл и укладываешься во время — ты готов. Бот показывает статистику по каждому типу заданий — используй её для финальной корректировки.</p>
+
+    <h3>Родители могут следить за подготовкой?</h3>
+    <p>Да. Ребёнок отправляет команду /invite_parent — родитель получает ссылку на дашборд со статистикой: сколько задач решено, какие темы требуют внимания, есть ли регулярность занятий.</p>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <strong>AskMathBot</strong>
+        <p>AI-репетитор по математике</p>
+      </div>
+      <div class="footer__links">
+        <a href="index.html">Главная</a>
+        <a href="oge-matematika.html">ОГЭ</a>
+        <a href="ege-matematika.html">ЕГЭ</a>
+        <a href="privacy.html">Конфиденциальность</a>
+        <a href="terms.html">Соглашение</a>
+      </div>
+      <div class="footer__operator">
+        Оператор: Волков Егор Алексеевич (самозанятый)<br>
+        Контакт: <a href="mailto:privacy@askmath.ru">privacy@askmath.ru</a>
+      </div>
+      <div class="footer__copy">
+        &copy; 2025–2026 AskMathBot. Все права защищены.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
